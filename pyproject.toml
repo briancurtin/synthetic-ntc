@@ -1,0 +1,19 @@
+[project]
+name = "synthetic-ntc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Brian Curtin", email = "brian.curtin@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "esphome>=2026.9.1",
+]
+
+[project.scripts]
+synthetic-ntc = "synthetic_ntc:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"

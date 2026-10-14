@@ -1,0 +1,32 @@
+# Board: Seeed Studio XIAO ESP32C6 (Seeed Studio)
+# Definition: definitions/boards/seeed_xiao_esp32c6/manifest.yaml
+
+esphome:
+  name: synthetic-ntc
+  friendly_name: synthetic-ntc
+  comment: Synthetic Honeywell Indoor Temperature Sensor
+
+esp32:
+  # TODO: I don't think this needs to be specified since it doesn't require any C6 features
+  variant: esp32c6
+  flash_size: 4MB
+  framework:
+    type: esp-idf
+
+logger:
+
+api:
+  encryption:
+    key: !secret synthetic_ntc__encryption_key
+
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: synthetic-ntc Fallback Hotspot
+    password: !secret synthetic_ntc__fallback_hotspot
+
+captive_portal:
