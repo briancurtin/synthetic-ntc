@@ -66,12 +66,11 @@ temperature-to-resistance. The NTC sensor this device will be synthesizing uses
 a two-wire system, where the input wire should be connected to the RH terminal
 of a DS1841, and the output wire to the RW terminal.
 
-It's possible the [`ntc`](https://esphome.io/components/sensor/ntc/) sensor
-component in ESPHome can handle this directly, and there are plenty of C++
-examples that are quite readable. The component itself supports a temperature
-to resistance mapping, as does
-[sensor filtering](https://esphome.io/components/sensor/#to-ntc-resistance-filter).
-Deciding what to do between those options will take further research.
+It may be worth looking at ESPHome's
+[sensor filtering](https://esphome.io/components/sensor/#to-ntc-resistance-filter)
+to handle conversion and mapping. In our case we have the entire mapping from
+the spec sheet, so we wouldn't do the same thing in the examples and let it
+compute a curve.
 
 This is...
 * Good, because it does the least amount of work and relies entirely on setting
