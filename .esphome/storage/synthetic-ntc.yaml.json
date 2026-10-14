@@ -1,0 +1,21 @@
+{
+  "storage_version": 1,
+  "name": "synthetic-ntc",
+  "friendly_name": "synthetic-ntc",
+  "comment": null,
+  "esphome_version": null,
+  "src_version": 1,
+  "address": "synthetic-ntc.local",
+  "web_port": null,
+  "esp_platform": "ESP32",
+  "build_path": null,
+  "firmware_bin_path": null,
+  "loaded_integrations": [],
+  "loaded_platforms": [],
+  "no_mdns": false,
+  "framework": null,
+  "core_platform": "esp32",
+  "toolchain": null,
+  "area": null,
+  "framework_version": null
+}
