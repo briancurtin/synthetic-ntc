@@ -12,7 +12,7 @@ consulted: Craig Curtin <@craigcurtin>
 This device must emulate a Negative Temperature Coefficient thermistor by taking
 its temperature reading from other sensors and communicating a value back to
 the connected thermostat. A real NTC does this by decreasing resistance
-on the line as temperature increases.
+on the line as temperature increases, on a reverse logarithmic curve.
 
 See [Sensor Specifications](../sensor_specifications.md) for the required
 temperature-to-resistance table.
@@ -60,10 +60,12 @@ Given that the resistance table is provided in the datasheet, we can forget abou
 reading or calculating `V`<sub>in</sub> or `V`<sub>out</sub> by adjusting
 the resistance of a potentiometer. A digital potentiometer can set wiper values
 that modify resistance in code. Specifically,
-the [Adafruit DS1841](https://www.adafruit.com/product/4570) I2C log potentiometer
-supports modifying its lookup table to match the mapping we need to support
-temperature-to-resistance. The NTC sensor this device will be synthesizing uses
-a two-wire system, where the input wire should be connected to the RH terminal
+the [Adafruit DS1841](https://www.adafruit.com/product/4570) I2C digital
+logarithmic potentiometer has a reverse logarithmic resistance curve which appears
+to match the thermistor's resistance. Additionally, if needed, it supports
+modifying its lookup table if we need to make any adjustment, from my understanding.
+The NTC sensor this device will be synthesizing uses a two-wire system,
+where the input wire should be connected to the RH terminal
 of a DS1841, and the output wire to the RW terminal.
 
 It may be worth looking at ESPHome's
