@@ -41,7 +41,7 @@ From *Table 1* in the source document
 | 98  | 36.7 | 6551  |
 | 100 | 37.8 | 6301  |
 
-The thermistor's resistance follows an inverse logarithmic curve, like the following:
+The thermistor's resistance follows an inverse logarithmic curve, as follows:
 
 ```mermaid
 xychart
