@@ -41,6 +41,8 @@ From *Table 1* in the source document
 | 98  | 36.7 | 6551  |
 | 100 | 37.8 | 6301  |
 
+The thermistor's resistance follows an inverse logarithmic curve, like the following:
+
 ```mermaid
 xychart
     title "Resistance Curve"
@@ -48,7 +50,3 @@ xychart
     y-axis "Resistance (Ω)" 6000 --> 24000
     bar [22537, 20546, 18754, 17136, 15675, 14356, 13161, 12081, 11100, 10210, 9398, 8659, 7986, 7372, 6813, 6301]
 ```
-
-> [!NOTE]
-> The chart does not contain all values in order to be readable. Refer to the 
-> table for complete details. 
