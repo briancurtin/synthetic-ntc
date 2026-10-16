@@ -42,15 +42,13 @@ From *Table 1* in the source document
 | 100 | 37.8 | 6301  |
 
 ```mermaid
----
-config:
-    xyChart:
-        showDataLabel: true
-        showDataLabelOutsideBar: true
----
 xychart
     title "Resistance Curve"
     x-axis "Temperature (C)" [4.4, 6.7, 8.9, 11.1, 13.3, 15.6, 17.8, 20, 22.2, 24.4, 26.7, 28.9, 31.1, 33.3, 35.6, 37.8]
     y-axis "Resistance (Ω)" 6000 --> 24000
     bar [22537, 20546, 18754, 17136, 15675, 14356, 13161, 12081, 11100, 10210, 9398, 8659, 7986, 7372, 6813, 6301]
 ```
+
+> [!NOTE]
+> The chart does not contain all values in order to be readable. Refer to the 
+> table for complete details. 
